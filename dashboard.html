@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex flex-col lg:flex-row min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-64 bg-white shadow-md">
+            <div class="p-6 border-b">
+                <h1 class="text-2xl font-bold text-orange-500">MaitDent</h1>
+                <p class="text-sm text-gray-500">Dental Solution Technology</p>
+            </div>
+            <nav class="mt-6">
+                <a href="#" class="flex items-center py-3 px-4 bg-blue-100 text-blue-500 font-semibold rounded-lg">
+                    <span class="material-icons mr-3">dashboard</span> Dashboard
+                </a>
+                <a href="#" class="flex items-center py-3 px-4 text-gray-700 hover:bg-gray-200 rounded-lg">
+                    <span class="material-icons mr-3">list_alt</span> Orders
+                </a>
+                <a href="#" class="flex items-center py-3 px-4 text-gray-700 hover:bg-gray-200 rounded-lg">
+                    <span class="material-icons mr-3">description</span> Records
+                </a>
+                <a href="#" class="flex items-center py-3 px-4 text-gray-700 hover:bg-gray-200 rounded-lg">
+                    <span class="material-icons mr-3">logout</span> Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <header class="flex flex-wrap justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold">Dashboard</h2>
+                <div class="flex items-center space-x-4">
+                    <button class="relative">
+                        <span class="material-icons text-gray-600 bg-white shadow-md p-2 rounded-full">notifications</span>
+                    </button>
+                    <button class="flex items-center space-x-2">
+                        <span class="text-gray-600">Delicious Burger</span>
+                        <img src="https://via.placeholder.com/32" alt="profile" class="w-8 h-8 rounded-full">
+                    </button>
+                </div>
+            </header>
+
+            <!-- Statistics -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                <div class="bg-white shadow rounded-lg p-4 text-center">
+                    <h3 class="text-xl font-semibold">Created</h3>
+                    <p class="text-3xl text-blue-500">2325</p>
+                </div>
+                <div class="bg-white shadow rounded-lg p-4 text-center">
+                    <h3 class="text-xl font-semibold">Waiting at the station</h3>
+                    <p class="text-3xl text-blue-500">125</p>
+                </div>
+                <div class="bg-white shadow rounded-lg p-4 text-center">
+                    <h3 class="text-xl font-semibold">Slope in central area</h3>
+                    <p class="text-3xl text-blue-500">15</p>
+                </div>
+                <div class="bg-white shadow rounded-lg p-4 text-center">
+                    <h3 class="text-xl font-semibold">Sent to the lab</h3>
+                    <p class="text-3xl text-blue-500">153</p>
+                </div>
+                <div class="bg-white shadow rounded-lg p-4 text-center">
+                    <h3 class="text-xl font-semibold">In progress</h3>
+                    <p class="text-3xl text-blue-500">153</p>
+                </div>
+                <div class="bg-white shadow rounded-lg p-4 text-center">
+                    <h3 class="text-xl font-semibold">Back to the center</h3>
+                    <p class="text-3xl text-blue-500">53</p>
+                </div>
+                <div class="bg-white shadow rounded-lg p-4 text-center">
+                    <h3 class="text-xl font-semibold">Sent to customer</h3>
+                    <p class="text-3xl text-blue-500">1,925</p>
+                </div>
+                <div class="bg-white shadow rounded-lg p-4 text-center">
+                    <h3 class="text-xl font-semibold">Pending</h3>
+                    <p class="text-3xl text-blue-500">23,425</p>
+                </div>
+            </div>
+
+            <!-- User List Table -->
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="p-4 border-b">
+                    <h3 class="text-lg font-semibold">User List</h3>
+                </div>
+                <table class="w-full text-left table-auto border-collapse">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="py-3 px-6 text-gray-600 font-medium">Patient Name</th>
+                            <th class="py-3 px-6 text-gray-600 font-medium">Date In</th>
+                            <th class="py-3 px-6 text-gray-600 font-medium">Symptoms</th>
+                            <th class="py-3 px-6 text-gray-600 font-medium">Status</th>
+                            <th class="py-3 px-6 text-gray-600 font-medium text-right">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t hover:bg-gray-50">
+                            <td class="py-3 px-6">Jenny Wilson</td>
+                            <td class="py-3 px-6">Dec 18, 2021</td>
+                            <td class="py-3 px-6">Geriatrician</td>
+                            <td class="py-3 px-6 text-blue-500">Confirmed</td>
+                            <td class="py-3 px-6 flex justify-end space-x-4">
+                                <button class="text-blue-500 flex items-center" title="Edit">
+                                    <span class="material-icons">edit</span>
+                                </button>
+                                <button class="text-red-500 flex items-center" title="Delete">
+                                    <span class="material-icons">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-t hover:bg-gray-50">
+                            <td class="py-3 px-6">Albert Flores</td>
+                            <td class="py-3 px-6">Dec 18, 2021</td>
+                            <td class="py-3 px-6">Internist</td>
+                            <td class="py-3 px-6 text-orange-500">Incoming</td>
+                            <td class="py-3 px-6 flex justify-end space-x-4">
+                                <button class="text-blue-500 flex items-center" title="Edit">
+                                    <span class="material-icons">edit</span>
+                                </button>
+                                <button class="text-red-500 flex items-center" title="Delete">
+                                    <span class="material-icons">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-t hover:bg-gray-50">
+                            <td class="py-3 px-6">Floyd Miles</td>
+                            <td class="py-3 px-6">Dec 18, 2021</td>
+                            <td class="py-3 px-6">Urogynecologist</td>
+                            <td class="py-3 px-6 text-blue-500">Confirmed</td>
+                            <td class="py-3 px-6 flex justify-end space-x-4">
+                                <button class="text-blue-500 flex items-center" title="Edit">
+                                    <span class="material-icons">edit</span>
+                                </button>
+                                <button class="text-red-500 flex items-center" title="Delete">
+                                    <span class="material-icons">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-t hover:bg-gray-50">
+                            <td class="py-3 px-6">Marvin McKinney</td>
+                            <td class="py-3 px-6">Dec 18, 2021</td>
+                            <td class="py-3 px-6">Cardiologist</td>
+                            <td class="py-3 px-6 text-gray-400">Cancelled</td>
+                            <td class="py-3 px-6 flex justify-end space-x-4">
+                                <button class="text-blue-500 flex items-center" title="Edit">
+                                    <span class="material-icons">edit</span>
+                                </button>
+                                <button class="text-red-500 flex items-center" title="Delete">
+                                    <span class="material-icons">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

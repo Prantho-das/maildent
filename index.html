@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Dashboard</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex flex-col lg:flex-row">
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-64 bg-white shadow-md h-full lg:h-screen">
+            <div class="p-6">
+                <h1 class="text-2xl font-bold text-orange-500">MaitDent</h1>
+                <p class="text-sm text-gray-500">Dental Solution Technology</p>
+            </div>
+            <nav class="mt-10">
+                <a href="#" class="flex items-center py-2.5 px-4 text-gray-700 hover:bg-gray-200 rounded-lg">
+                    <span class="material-icons mr-3">dashboard</span> Dashboard
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 text-blue-500 bg-blue-100 font-semibold rounded-lg">
+                    <span class="material-icons mr-3">list_alt</span> Orders
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 text-gray-700 hover:bg-gray-200 rounded-lg">
+                    <span class="material-icons mr-3">person</span> Users
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 text-gray-700 hover:bg-gray-200 rounded-lg">
+                    <span class="material-icons mr-3">description</span> Records
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 text-gray-700 hover:bg-gray-200 rounded-lg">
+                    <span class="material-icons mr-3">payment</span> Payment
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 text-gray-700 hover:bg-gray-200 rounded-lg">
+                    <span class="material-icons mr-3">settings</span> Setting
+                </a>
+                <a href="#" class="flex items-center py-2.5 px-4 text-gray-700 hover:bg-gray-200 rounded-lg">
+                    <span class="material-icons mr-3">logout</span> Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <header class="flex flex-wrap justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold">Orders</h2>
+                <div class="flex items-center space-x-4">
+                    <button class="relative">
+                        <span class="material-icons text-gray-600 bg-white shadow-md p-2 rounded-full">notifications</span>
+                    </button>
+                    <button class="flex items-center space-x-2">
+                        <span class="text-gray-600">Delicious Burger</span>
+                        <img src="https://via.placeholder.com/32" alt="profile" class="w-8 h-8 rounded-full">
+                    </button>
+                </div>
+            </header>
+
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <table class="w-full text-left table-auto border-collapse">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="py-3 px-6 text-gray-600 font-medium">Order Num.</th>
+                            <th class="py-3 px-6 text-gray-600 font-medium">Date In</th>
+                            <th class="py-3 px-6 text-gray-600 font-medium">Username</th>
+                            <th class="py-3 px-6 text-gray-600 font-medium">Status</th>
+                            <th class="py-3 px-6 text-gray-600 font-medium text-right">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Row -->
+                        <tr class="border-t hover:bg-gray-50">
+                            <td class="py-3 px-6">1234567890</td>
+                            <td class="py-3 px-6">Dec 18, 2021</td>
+                            <td class="py-3 px-6">@the_dental123</td>
+                            <td class="py-3 px-6 text-blue-500">Confirmed</td>
+                            <td class="py-3 px-6 flex justify-end space-x-4">
+                                <button class="text-orange-500 flex items-center" title="Edit">
+                                    <span class="material-icons">edit</span>
+                                </button>
+                                <button class="text-orange-500 flex items-center" title="Delete">
+                                    <span class="material-icons">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Repeat as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
