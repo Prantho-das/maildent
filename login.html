@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaitDent - Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         body {
@@ -18,17 +18,16 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #f4f7fc;
-            overflow: hidden;
+            background: #f8f9fa;
         }
 
         .login-container {
-            background: #fff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 380px;
+            max-width: 400px;
         }
 
         .logo {
@@ -36,12 +35,12 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .logo span {
-            font-size: 36px;
-            font-weight: 500;
+            font-size: 28px;
+            font-weight: bold;
         }
 
         .logo span:first-child {
@@ -52,14 +51,6 @@
             color: #4070f4;
         }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #333;
-            font-weight: 500;
-        }
-
         .input-group {
             margin-bottom: 20px;
         }
@@ -67,103 +58,47 @@
         .input-group label {
             display: block;
             margin-bottom: 8px;
-            color: #666;
+            color: #333;
             font-size: 14px;
         }
 
         .input-group input {
             width: 100%;
-            padding: 14px;
+            padding: 12px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            font-size: 16px;
-            background-color: #f8f9fa;
-            transition: all 0.3s ease;
-        }
-
-        .input-group input:focus {
-            border-color: #4070f4;
-            background-color: #fff;
-            outline: none;
+            font-size: 14px;
+            margin-top: 8px;
         }
 
         .login-btn {
             width: 100%;
-            padding: 14px;
+            padding: 12px;
             background: #4070f4;
             color: white;
             border: none;
             border-radius: 8px;
-            font-size: 16px;
-            font-weight: 500;
             cursor: pointer;
-            transition: all 0.3s ease;
+            font-size: 16px;
+            transition: background 0.3s;
         }
 
         .login-btn:hover {
             background: #3058cc;
         }
 
-        .forgot-password {
-            text-align: center;
-            margin-top: 12px;
-        }
-
-        .forgot-password a {
-            color: #4070f4;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .forgot-password a:hover {
-            text-decoration: underline;
-        }
-
         .signup-link {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 16px;
         }
 
         .signup-link a {
             color: #4070f4;
-            font-size: 14px;
             text-decoration: none;
         }
 
         .signup-link a:hover {
             text-decoration: underline;
-        }
-
-        .divider {
-            margin: 20px 0;
-            text-align: center;
-            position: relative;
-            color: #aaa;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 40%;
-            height: 1px;
-            background: #ddd;
-        }
-
-        .divider::before {
-            left: 0;
-        }
-
-        .divider::after {
-            right: 0;
-        }
-
-        .divider span {
-            font-size: 12px;
-            font-weight: 500;
-            background: #fff;
-            padding: 0 10px;
         }
     </style>
 </head>
@@ -174,11 +109,11 @@
             <span>Dent</span>
         </div>
         
-        <h2>Login to Your Account</h2>
+        <h2>Login</h2>
         
         <form action="/login" method="POST">
             <div class="input-group">
-                <label for="email">Email Address</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             
@@ -188,15 +123,6 @@
             </div>
             
             <button type="submit" class="login-btn">Login</button>
-
-            <div class="forgot-password">
-                <a href="/forgot-password">Forgot Password?</a>
-            </div>
-
-            <div class="divider">
-                <span>OR</span>
-            </div>
-            
         </form>
         
         <div class="signup-link">
